@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Blockchain</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Blockchain Sale Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="http://127.0.0.1:5000/">Save Invoice</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/view_invoice">View Invoice</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/view_block">View Blockchain</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/view_prediction">View Prediction</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div style="width:80%; margin-left: 150px;">
+    <form action="http://127.0.0.1:5000/save_invoice" method="post">
+        <div class="form-group">
+            <label>Product</label>
+            <select name="product" class="form-control">
+                <option>CAPTAIN OATS (POUCH)</option>
+                <option>CAPTAIN OATS INSTANT(POUC)</option>
+                <option>KELLOGG S HONEYLOOPS K PK</option>
+                <option>KELLOGGS CHOCOS</option>
+                <option>NUTRILINE CHOCOBLOBS 150GR</option>
+                <option>NUTRILINE CHOCOGRAINS</option>
+                <option>NESTLE CORN FLAKES</option>
+                <option>NESTLE KOKO KRUNCH</option>
+                <option>SAMAPOSHA 200GR</option>
+                <option>4GB NUTRA GRAIN BAR</option>
+                <option>4GB CHOXY GRAIN BAR</option>
+                <option>NUTRIMATE CHOCO BUBBLES CUP</option>
+                <option>OATEO CEREAL DRINK CLASSIC</option>
+                <option>PANADERIA SANDWICH BREAD</option>
+                <option>FINAGLE KURAKKAN DIET BREAD</option>
+                <option>AKRA KURAKKAN DIET BREAD</option>
+                <option>PAVILION SANDWICH BREAD</option>
+                <option>PRIMA TEA BUN</option>
+                <option>LITTLE LION MADEIRA CAKE</option>
+                <option>TIARA ROLLO CAKE</option>
+                <option>TAMARIND</option>
+                <option>NOODLE STIR FRY MIX TRAY</option>
+                <option>SALAD MIX-5VEGE PACK</option>
+                <option>PORK SAUSAGE</option>
+                <option>DAINTEE ASSORTED FRUIT JELLY</option>
+                <option>MUNCHEE KOME BITES CUMIN</option>
+                <option>KIST GINGER BISCUITS</option>
+                <option>MENTOS MINT BUY 3 & GET 1 FREE</option>
+                <option>TIC TAC CHERRY COLA MIXER</option>
+                <option>MARS FUN SIZE</option>
+                <option>RITZBURY REV.CASHEW CHOCO 100G</option>
+                <option>RITZBURY CHOCOLATE FINGER</option>
+                <option>NESTLE KIT KAT</option>
+                <option>EDNA CHOCO FINGERS</option>
+                <option>KANDOS DARK MINT BAR</option>
+                <option>LORENZ POMSTICKS SOUR CRE 100G</option>
+                <option>FROZEN PRAWNSÂ PACK</option>
+                <option>MAGIC HEAV: MOCHA CHOC CHIP</option>
+                <option>SARANGANI SOYA BALLS</option>
+                <option>KOTMALE CHEDDAR CHEESE BLOCK</option>
+                <option>SEA ISLAND CURD CLAY POT</option>
+                <option>NLDB CURD CLAY POT</option>
+                <option>BEGA CREAM CHEESE</option>
+                <option>BELLE MARGARINE SPREAD</option>
+                <option>BARARI TUNISIAN DATES</option>
+                <option>MY CHOICE COCOA POWDER</option>
+                <option>MOTHA JELLY RASPBERRY</option>
+                <option>MOTHA GELATINE</option>
+                <option>MAGGI CHICKEN SEASONING CUBES</option>
+                <option>MY CHOICE DRIED KOONI/PRAWNS</option>
+                <option>FORTUNE COCOFINE COCO.OIL 675M</option>
+                <option>RATTHI RED COW RASAA PADAMA</option>
+                <option>EVERVESS CLUB SODA</option>
+                <option>MD MANGO DELIGHT</option>
+                <option>NESTOMALT GOLD RTD</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Quantity</label>
+            <input type="number" class="form-control" name="quantity" placeholder="Quantity" required>
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="number" class="form-control" name="price" placeholder="Price" required>
+        </div>
+        <br>
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+    </form>
+    <center><h5 style="color: green">{{status}}</h5></center>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+-->
+</body>
+</html>
